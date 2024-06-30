@@ -26,14 +26,14 @@ export const InfoCard = () => {
             <HStack alignSelf={{ base: "center", md: "flex-start" }}>
               <Image src="/logo.png" h={16} borderRadius={16} />
               <Text fontSize={24} fontWeight={800}>
-                EcoEarn
+                Green Wise
               </Text>
             </HStack>
             <Flex
               mt={{ base: 4, md: 0 }}
               direction={{ base: "column", md: "row" }}
             >
-              <Link isExternal href="https://github.com/vechain/x-app-template">
+              <Link isExternal href="https://github.com/ashwinirao1/greenwise">
                 <Button
                   rounded={"full"}
                   colorScheme="primary"

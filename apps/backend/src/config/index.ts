@@ -11,4 +11,5 @@ export const { NETWORK_URL, NETWORK_TYPE } = process.env;
 export const { RECAPTCHA_SECRET_KEY } = process.env;
 export const { REWARD_AMOUNT } = process.env;
 
-export const ADMIN_PRIVATE_KEY = mnemonic.derivePrivateKey(ADMIN_MNEMONIC.split(' '));
+
+export const ADMIN_PRIVATE_KEY = mnemonic.derivePrivateKey(["dry", "situate", "test", "depart", "hawk", "pet", "gauge", "stove", "analyst", "half", "heavy", "gallery"]);

@@ -10,10 +10,7 @@ export class OpenaiService {
 
     const prompt = `
                     Analyze the image provided. The image MUST satisfy all of the following criteria:
-                        1. It must have as subject a receipt of purchase of at least one product.
-                        2. It must not be a screenshot.
-                        3. It must include the date of the purchase.
-                        4. It must include the name of the store where the purchase was made.
+                        1. It must contain keyword sustainable.
                     Please respond using a JSON object without comments and do not add any other descriptions and comments:
                     {
                     'validityFactor': number, // 0-1, 1 if it satisfies all the criteria, 0 otherwise

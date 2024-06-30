@@ -3,19 +3,19 @@ import { Step } from "./Step";
 
 const Steps = [
   {
-    icon: "/steps/1.svg",
-    title: "Purchase eco-friendly products",
-    description: "Buy products that are eco-friendly and sustainable.",
+    icon: "/steps/1.png",
+    title: "Prepare sustainibility document",
+    description: "Get your eco-friendly and sustainable pic/book/article from any of socials with #sustainable hashtag.",
   },
   {
     icon: "/steps/2.svg",
-    title: "Upload the receipt",
-    description: "Upload your receipt and AI will verify the products.",
+    title: "Upload your sustainibility document",
+    description: "Upload your document or pic and AI will verify if it's valid.",
   },
   {
     icon: "/steps/3.svg",
     title: "Earn rewards",
-    description: "Earn B3TR for purchasing eco-friendly products.",
+    description: "You did it! Now Earn B3TR for purchasing eco-friendly products.",
   },
 ];
 

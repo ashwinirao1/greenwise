@@ -32,7 +32,7 @@ module.exports = {
         vechain_solo: {
             url: VECHAIN_URL_SOLO,
             accounts: {
-                mnemonic: 'denial kitchen pet squirrel other broom bar gas better priority spoil cross',
+                mnemonic: 'dry situate test depart hawk pet gauge stove analyst half heavy gallery',
                 count: 10,
                 path: "m/44'/818'/0'/0",
             },
@@ -43,7 +43,7 @@ module.exports = {
         vechain_testnet: {
             url: process.env.TESTNET_URL ?? '',
             accounts: {
-                mnemonic: process.env.MNEMONIC ?? '',
+                mnemonic: 'dry situate test depart hawk pet gauge stove analyst half heavy gallery',
                 count: 10,
                 path: "m/44'/818'/0'/0",
             },
