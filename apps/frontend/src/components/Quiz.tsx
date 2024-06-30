@@ -5,6 +5,8 @@ import { useNavigate } from 'react-router-dom';
 import quizData from './mockData/mockQuiz.json'; // Adjust the import path based on your project structure
 
 
+
+
 const styles = {
     box: {
       backgroundColor: '#5f9a39',
@@ -20,7 +22,7 @@ const styles = {
   const RoundedTextBox = () => {
     return (
       <div style={styles.box}>
-        Nice work! 
+        Nice work! You earned 100 more points, check your wallet $$$
       </div>
     );
   };
@@ -44,6 +46,7 @@ export const Quiz = () => {
 
       // Show animation for correct answer and navigate to home
       setShowAnimation(true); // Show +50 points animation
+      console.log("Questions successfully answered, transferd 100 points to the user.")
       setTimeout(() => {
         history('/');
       }, 5000); // Navigate to home after 2 seconds (adjust timing as needed)

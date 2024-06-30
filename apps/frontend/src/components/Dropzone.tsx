@@ -24,7 +24,7 @@ export const Dropzone: React.FC<DropzoneProps> = ({ onDropSuccess }) => {
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     onDrop: (acceptedFiles: File[]) => {
-      onFileUpload(acceptedFiles); // Pass the files to the callback
+      // onFileUpload(acceptedFiles); // Pass the files to the callback
       onDropSuccess(); 
     },
     maxFiles: 1, // Allow only one file

@@ -68,7 +68,7 @@ export const Landing: React.FC = () => {
     setState('analyzing');
     setTimeout(() => {
       setState('success');
-    }, 3000); // Simulate analyzing time of 3 seconds
+    }, 5000); // Simulate analyzing time of 5 seconds
   };
 
   return (
@@ -110,16 +110,21 @@ export const Landing: React.FC = () => {
             )}
             {state === 'analyzing' && (
               <>
-                <motion.div
+              <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                Analyzing...     
+                <p>
+                  Analyzing...
+                </p>   
+                <p style={{ color: 'grey', fontSize: 'smaller' }}>
+                  Powered by OpenAI
+                </p>  
               </motion.div>
               <ScanIcon size={120} color={"#5f9a39"} />
-              </>
+            </>
             )}
             {state === 'success' && <Award />}
           </AnimatePresence>
