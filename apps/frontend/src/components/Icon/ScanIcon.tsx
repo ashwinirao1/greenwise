@@ -36,3 +36,28 @@ export const ScanIcon = ({ color, size }: Props) => {
     </svg>
   );
 };
+
+export const PlusIcon = ({ color, size }: Props) => {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 180 180"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M90 20V160"
+        stroke={color}
+        strokeWidth="10"
+        strokeLinecap="round"
+      />
+      <path
+        d="M20 90H160"
+        stroke={color}
+        strokeWidth="10"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+};

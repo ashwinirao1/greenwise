@@ -20,5 +20,9 @@
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "dependencies": {
+    "framer-motion": "^11.2.12",
+    "react-router-dom": "^6.24.0"
+  }
 }

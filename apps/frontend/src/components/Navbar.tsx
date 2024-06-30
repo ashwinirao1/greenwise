@@ -1,5 +1,7 @@
 import { Box, Container, HStack, Image } from "@chakra-ui/react";
 import { ConnectWalletButton } from "./ConnectWalletButton";
+
+
 export const Navbar = () => {
   return (
     <Box
@@ -21,11 +23,11 @@ export const Navbar = () => {
         maxW={"container.xl"}
       >
         <HStack flex={1} justifyContent={"start"}>
-          <Image src="/vebetterdao-logo.svg" />
+          <Image src="/logo.png" h={50} w={50} borderRadius={16} />
         </HStack>
 
         <HStack flex={1} spacing={4} justifyContent={"end"}>
-          <ConnectWalletButton />
+          <h1 style={{ fontWeight: 'bold', fontSize: '2rem' }}>Green Wise</h1>
         </HStack>
       </Container>
     </Box>

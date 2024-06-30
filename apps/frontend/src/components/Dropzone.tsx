@@ -1,14 +1,18 @@
 import { useCallback } from "react";
 import { useDropzone } from "react-dropzone";
 import { Box, HStack, Text, VStack } from "@chakra-ui/react";
-import { ScanIcon } from "./Icon";
+import { PlusIcon } from "./Icon";
 import { blobToBase64, getDeviceId, resizeImage } from "../util";
 import { useWallet } from "@vechain/dapp-kit-react";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import { submitReceipt } from "../networking";
 import { useDisclosure, useSubmission } from "../hooks";
 
-export const Dropzone = () => {
+interface DropzoneProps {
+  onDropSuccess: () => void; // Define a callback prop for drop success
+}
+
+export const Dropzone: React.FC<DropzoneProps> = ({ onDropSuccess }) => {
   const { account } = useWallet();
 
   const { executeRecaptcha } = useGoogleReCaptcha();
@@ -18,7 +22,8 @@ export const Dropzone = () => {
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     onDrop: (acceptedFiles: File[]) => {
-      onFileUpload(acceptedFiles); // Pass the files to the callback
+      // onFileUpload(acceptedFiles); // Pass the files to the callback
+      onDropSuccess()
     },
     maxFiles: 1, // Allow only one file
     accept: {
@@ -109,7 +114,7 @@ export const Dropzone = () => {
       >
         <input {...getInputProps()} />
         <HStack>
-          <ScanIcon size={120} color={"gray"} />
+          <PlusIcon size={120} color={"#5f9a39"} />
           <Text>Upload to scan</Text>
         </HStack>
       </Box>
