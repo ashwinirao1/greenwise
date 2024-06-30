@@ -10,11 +10,12 @@ export class OpenaiService {
 
     const prompt = `
                     Analyze the image provided. The image MUST satisfy all of the following criteria:
-                        1. It must contain keyword sustainable.
+                        1. It must contain the language related to sustainability where the content is about being sustainable.
+                    Based on the content of the image generate a multiple choice question with one correct answer about a topic of sustainability from the image.
                     Please respond using a JSON object without comments and do not add any other descriptions and comments:
                     {
-                    'validityFactor': number, // 0-1, 1 if it satisfies all the criteria, 0 otherwise
-                    'descriptionOfAnalysis': string, // indicate your analysis of the image and why it satisfies or not the criteria. The analysis will be shown to the user so make him understand why the image doesn't satisfy the criteria if it doesn't without going into detail on exact criteria. Remember we are rewarding users that drink coffee in a sustainable way.
+                    "validityFactor": number, // 0-1, 1 if it satisfies all the criteria, 0 otherwise
+                    " Question": string, // Ask a multiple choice question based on the content from the image and the answer will be something close to what content is about, make sure that question is fairly simple. 
                     }
                     `;
 

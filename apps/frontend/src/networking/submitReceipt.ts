@@ -2,6 +2,11 @@ import axios from "axios";
 import { ReceiptData } from "./type";
 import { backendURL } from "../config";
 
+import { HttpException } from '@/exceptions/HttpException';
+import { openAIHelper } from '@/server';
+import { isBase64Image } from '@/utils/data';
+import { Service } from 'typedi';
+
 export type Response = {
   validation: {
     validityFactor: number;

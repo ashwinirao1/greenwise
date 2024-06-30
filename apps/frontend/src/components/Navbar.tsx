@@ -24,10 +24,11 @@ export const Navbar = () => {
       >
         <HStack flex={1} justifyContent={"start"}>
           <Image src="/logo.png" h={50} w={50} borderRadius={16} />
+          <h1 style={{ fontWeight: 'bold'}}>GreenWise</h1>
         </HStack>
 
         <HStack flex={1} spacing={4} justifyContent={"end"}>
-          <h1 style={{ fontWeight: 'bold', fontSize: '2rem' }}>Green Wise</h1>
+          <ConnectWalletButton/>
         </HStack>
       </Container>
     </Box>
