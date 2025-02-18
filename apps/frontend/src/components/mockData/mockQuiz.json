@@ -1,0 +1,23 @@
+{
+    "questions": [
+      {
+        "question": "What is a sustainable practice to reduce carbon footprint?",
+        "options": [
+          { "id": "option1", "text": "Recycling" },
+          { "id": "option2", "text": "Eating less meat" },
+          { "id": "option3", "text": "Using renewable energy", "correct": true },
+          { "id": "option4", "text": "Driving more often" }
+        ]
+      },
+      {
+        "question": "Which material is most sustainable for packaging?",
+        "options": [
+          { "id": "option1", "text": "Plastic" },
+          { "id": "option2", "text": "Glass" },
+          { "id": "option3", "text": "Paper", "correct": true },
+          { "id": "option4", "text": "Styrofoam" }
+        ]
+      }
+    ]
+  }
+  

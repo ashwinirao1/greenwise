@@ -3,7 +3,6 @@ import {
   VStack,
   Text,
   Container,
-  HStack,
   Box,
   Show,
   Link,
@@ -19,88 +18,8 @@ import { BeBetterVeBetterIcon } from "../Icon";
 export const Footer: React.FC = () => {
   const desktopContent = (
     <VStack>
-      <HStack justifyContent={"space-between"} w="full" spacing={4} my={4}>
-        <Box my={14}>
-          <BeBetterVeBetterIcon
-            beBetterProps={{
-              width: "80%",
-            }}
-            veBetterProps={{
-              width: "100%",
-            }}
-          />
-        </Box>
-        <VStack spacing={4} alignItems={"flex-end"}>
-          <DiscordButton />
-          <TelegramButton />
-        </VStack>
-      </HStack>
-      <HStack
-        justifyContent={"space-between"}
-        w="full"
-        borderTopColor={"#3e3c3a"}
-        borderTopWidth={1}
-        py={8}
-      >
-        <Text
-          fontWeight={400}
-          fontSize="14px"
-          lineHeight="17px"
-          color="#8c8c8c"
-        >
-          2024 VeBetterDAO. All rights reserved.
-        </Text>
-        <HStack spacing={4}>
-          <Link href={PRIVACY_POLICY_LINK} isExternal>
-            <Text
-              fontWeight={400}
-              fontSize="14px"
-              lineHeight="17px"
-              color="#8c8c8c"
-              as="u"
-              cursor={"pointer"}
-            >
-              Privacy & Policy
-            </Text>
-          </Link>
-          <Link href={TERMS_AND_CONDITIONS_LINK} isExternal>
-            <Text
-              fontWeight={400}
-              fontSize="14px"
-              lineHeight="17px"
-              color="#8c8c8c"
-              as="u"
-              cursor={"pointer"}
-            >
-              Terms & Conditions
-            </Text>
-          </Link>
-        </HStack>
-        <Socials />
-      </HStack>
-    </VStack>
-  );
-
-  const mobileContent = (
-    <VStack>
       <VStack spacing={4} my={4}>
-        <Box my={8}>
-          <BeBetterVeBetterIcon
-            beBetterProps={{
-              width: "80%",
-            }}
-            veBetterProps={{
-              width: "100%",
-            }}
-          />
-        </Box>
-        <VStack spacing={4} alignItems={"center"}>
-          <DiscordButton />
-          <TelegramButton />
-          <Box mt={6}>
-            <Socials />
-          </Box>
-        </VStack>
+        {/* Your desktop content here */}
       </VStack>
       <VStack borderTopColor={"#3e3c3a"} borderTopWidth={1} py={8}>
         <Link href={PRIVACY_POLICY_LINK} isExternal>
@@ -108,7 +27,7 @@ export const Footer: React.FC = () => {
             fontWeight={400}
             fontSize="14px"
             lineHeight="17px"
-            color="#8c8c8c"
+            color="#000000"
             as="u"
             cursor={"pointer"}
           >
@@ -120,7 +39,7 @@ export const Footer: React.FC = () => {
             fontWeight={400}
             fontSize="14px"
             lineHeight="17px"
-            color="#8c8c8c"
+            color="#000000"
             as="u"
             cursor={"pointer"}
           >
@@ -131,17 +50,69 @@ export const Footer: React.FC = () => {
           fontWeight={400}
           fontSize="14px"
           lineHeight="17px"
-          color="#8c8c8c"
+          color="#000000"
           mt={6}
         >
-          2024 VeBetterDAO. All rights reserved.
+          Powered by VeChain | 2024 Green Wise. All rights reserved.
+        </Text>
+      </VStack>
+    </VStack>
+  );
+
+  const mobileContent = (
+    <VStack>
+      <VStack spacing={4} my={4}>
+        {/* Your mobile content here */}
+      </VStack>
+      <VStack borderTopColor={"#3e3c3a"} borderTopWidth={1} py={8}>
+        <Link href={PRIVACY_POLICY_LINK} isExternal>
+          <Text
+            fontWeight={400}
+            fontSize="14px"
+            lineHeight="17px"
+            color="#000000"
+            as="u"
+            cursor={"pointer"}
+          >
+            Privacy & Policy
+          </Text>
+        </Link>
+        <Link href={TERMS_AND_CONDITIONS_LINK} isExternal>
+          <Text
+            fontWeight={400}
+            fontSize="14px"
+            lineHeight="17px"
+            color="#000000"
+            as="u"
+            cursor={"pointer"}
+          >
+            Terms & Conditions
+          </Text>
+        </Link>
+        <Text
+          fontWeight={400}
+          fontSize="14px"
+          lineHeight="17px"
+          color="#000000"
+          mt={6}
+        >
+          Powered by VeChain | 2024 Green Wise. All rights reserved.
         </Text>
       </VStack>
     </VStack>
   );
 
   return (
-    <Flex bgColor={"#191714"}>
+    <Flex
+      as="footer"
+      position="fixed"
+      left="0"
+      bottom="0"
+      width="100%"
+      bgColor={"#5f9a39"}
+      justifyContent={"center"}
+      zIndex={10}
+    >
       <Container
         maxW={"container.xl"}
         display={"flex"}

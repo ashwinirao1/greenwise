@@ -23,13 +23,8 @@ export const InfoCard = () => {
             direction={{ base: "column", md: "row" }}
             alignItems={"center"}
           >
-            <HStack alignSelf={{ base: "center", md: "flex-start" }}>
-              <Image src="/logo.png" h={16} borderRadius={16} />
-              <Text fontSize={24} fontWeight={800}>
-                Green Wise
-              </Text>
-            </HStack>
-            <Flex
+         
+            {/* <Flex
               mt={{ base: 4, md: 0 }}
               direction={{ base: "column", md: "row" }}
             >
@@ -45,7 +40,7 @@ export const InfoCard = () => {
                   Github repository
                 </Button>
               </Link>
-            </Flex>
+            </Flex> */}
           </Flex>
         </VStack>
       </Box>

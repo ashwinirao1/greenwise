@@ -17,6 +17,7 @@ export const ConnectWalletButton = () => {
           size="md"
           leftIcon={<FaWallet />}
           data-testid="connect-wallet"
+          bg="rgba(95,154,57,1)"
         >
           Connect Wallet
         </Button>
@@ -30,7 +31,7 @@ export const ConnectWalletButton = () => {
         rounded={"full"}
         color="black"
         size="md"
-        bg="rgba(235, 236, 252, 1)"
+        bg="rgba(95,154,57,1)"
       >
         <HStack spacing={2}>
           <AddressIcon address={account} boxSize={4} rounded={"full"} />

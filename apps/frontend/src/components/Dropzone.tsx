@@ -1,24 +1,31 @@
 import { useCallback } from "react";
 import { useDropzone } from "react-dropzone";
 import { Box, HStack, Text, VStack } from "@chakra-ui/react";
-import { ScanIcon } from "./Icon";
+import { PlusIcon } from "./Icon";
 import { blobToBase64, getDeviceId, resizeImage } from "../util";
 import { useWallet } from "@vechain/dapp-kit-react";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
-import { submitReceipt } from "../networking";
+import { submitReceipt, validateImage } from "../networking";
 import { useDisclosure, useSubmission } from "../hooks";
 
-export const Dropzone = () => {
+
+interface DropzoneProps {
+  onDropSuccess: () => void; // Define a callback prop for drop success
+}
+
+export const Dropzone: React.FC<DropzoneProps> = ({ onDropSuccess }) => {
   const { account } = useWallet();
 
-  const { executeRecaptcha } = useGoogleReCaptcha();
+   const { executeRecaptcha } = useGoogleReCaptcha();
 
   const { setIsLoading, setResponse } = useSubmission();
   const { onOpen } = useDisclosure();
 
+
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     onDrop: (acceptedFiles: File[]) => {
-      onFileUpload(acceptedFiles); // Pass the files to the callback
+      // onFileUpload(acceptedFiles); // Pass the files to the callback
+      onDropSuccess(); 
     },
     maxFiles: 1, // Allow only one file
     accept: {
@@ -27,13 +34,13 @@ export const Dropzone = () => {
   });
 
   const handleCaptchaVerify = useCallback(async () => {
-    if (!executeRecaptcha) {
-      alert("Recaptcha not loaded");
-      return;
-    }
+    // if (!executeRecaptcha) {
+    //   alert("Recaptcha not loaded");
+    //   return;
+    // }
 
-    const token = await executeRecaptcha("submit_receipt");
-    return token;
+    // const token = await executeRecaptcha("submit_receipt");
+    return "token";
   }, [executeRecaptcha]);
 
   const onFileUpload = useCallback(
@@ -66,6 +73,7 @@ export const Dropzone = () => {
       const deviceID = await getDeviceId();
 
       try {
+
         const response = await submitReceipt({
           address: account,
           captcha,
@@ -77,7 +85,7 @@ export const Dropzone = () => {
 
         setResponse(response);
       } catch (error) {
-        alert("Error submitting receipt");
+        alert("Error submitting receipt" + error);
       } finally {
         setIsLoading(false);
       }
@@ -109,7 +117,7 @@ export const Dropzone = () => {
       >
         <input {...getInputProps()} />
         <HStack>
-          <ScanIcon size={120} color={"gray"} />
+          <PlusIcon size={120} color={"#5f9a39"} />
           <Text>Upload to scan</Text>
         </HStack>
       </Box>
