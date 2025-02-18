@@ -1,7 +1,7 @@
 # GreenWise
 
 ## 🌱 Learn to Earn Sustainability
-GreenWise is an innovative platform designed to increase sustainability awareness by rewarding users for learning and engaging with sustainability content. Through a **Learn, Upload, and Earn** model, users can deepen their knowledge and get rewarded with B3TR tokens.
+GreenWise is an innovative platform designed to increase sustainability awareness by rewarding users for learning and engaging with sustainability content. Through a **Learn, Upload, and Earn** model, users can deepen their knowledge and get rewarded with B3TR tokens. The app [got 4th place at the vechainofficial x BCG EasyA hackathon ](https://x.com/easya_app/status/1807913670326079559). 
 
 ## 📌 Problem Statement
 Despite the growing importance of sustainability, a significant portion of the population lacks awareness:
@@ -41,6 +41,7 @@ GreenWise addresses this gap by providing an engaging and incentivized learning 
 2. **Launch & Marketing** – Increase adoption and user engagement.
 3. **Content Sharing Feature** – Allow users to share their sustainability knowledge.
 4. **Sustainability Library** – Build a comprehensive resource hub for sustainability learning.
+
 
 
 
